@@ -1,3 +1,4 @@
+import kaggle.api
 from kaggle.api.kaggle_api_extended import KaggleApi
 api = KaggleApi()
 api.authenticate()
@@ -9,15 +10,3 @@ api.authenticate()
 # downoad single file
 #Signature: dataset_download_file(dataset, file_name, path=None, force=False, quiet=True)
 api.dataset_download_file('robervalt/sunspots','Sunspots.csv')
-
-import csv
-time_step = []
-sunspots = []
-
-with open('sunspots.csv') as csvfile:
-  reader = csv.reader(csvfile, delimiter=',')
-  next(reader)
-  for row in reader:
-    sunspots.append(float(row[2]))
-    time_step.append(int(row[0]))
-
