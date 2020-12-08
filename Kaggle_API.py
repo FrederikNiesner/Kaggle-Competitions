@@ -1,5 +1,6 @@
 import kaggle.api
 from kaggle.api.kaggle_api_extended import KaggleApi
+
 api = KaggleApi()
 api.authenticate()
 
@@ -8,5 +9,5 @@ api.authenticate()
 # api.dataset_download_files('avenn98/world-of-warcraft-demographics')
 
 # downoad single file
-#Signature: dataset_download_file(dataset, file_name, path=None, force=False, quiet=True)
-api.dataset_download_file('robervalt/sunspots','Sunspots.csv')
+# Signature: dataset_download_file(dataset, file_name, path=None, force=False, quiet=True)
+api.dataset_download_file("robervalt/sunspots", "Sunspots.csv")
